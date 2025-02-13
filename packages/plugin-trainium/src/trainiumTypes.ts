@@ -96,6 +96,8 @@ export function isRegisterContent(obj: any): obj is RegisterContent {
 // ---------------------------
 // Update User Profile
 // ---------------------------
+
+
 export const UpdateUserProfileSchema = z.object({
   height_ft: z.number().optional(),
   weight_lbs: z.number().optional(),
@@ -103,9 +105,10 @@ export const UpdateUserProfileSchema = z.object({
   sex: z.enum(["M", "F", "O"]).optional(),
   goal: z.enum(["maintain", "bulk", "cut"]).optional(),
   theme: z.enum(["light", "dark"]).optional(),
-  profile_pic_path: z.string().optional(),
+  profile_pic_path: z.string().nullable().optional(), // allow null
   progress_pics: z.array(z.string()).optional(),
 });
+
 export type UpdateUserProfileContent = z.infer<typeof UpdateUserProfileSchema>;
 export function isUpdateUserProfileContent(obj: any): obj is UpdateUserProfileContent {
   return UpdateUserProfileSchema.safeParse(obj).success;

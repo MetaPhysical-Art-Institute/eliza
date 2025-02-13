@@ -5,7 +5,7 @@ import fetch from "node-fetch";
 import { LogWorkoutContent, LogMacroContent } from "../trainiumTypes";
 
 // Base URL for your API. Adjust as needed.
-const TRAINIUM_API_BASE = "http://127.0.0.1:8080";
+const TRAINIUM_API_BASE = "https://workouts-1.onrender.com";
 
 // Variable to store the JWT token returned on login.
 let jwtToken: string | null = null;
