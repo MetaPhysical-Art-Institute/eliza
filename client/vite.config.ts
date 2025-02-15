@@ -37,7 +37,7 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       // Allow the specified ngrok host
-      allowedHosts: ["trainium.ngrok.dev"],
+      allowedHosts: ["trainium.ngrok.dev"],["trainium.app"]
       // Optionally, if you need to set a custom port, you can also add:
        //port: Number(env.SERVER_PORT) || 3002,
     },

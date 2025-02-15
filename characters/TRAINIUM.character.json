@@ -1,7 +1,7 @@
 {
     "name": "TRAINIUM",
     "clients": ["twitter"],
-    "modelProvider": "openai",
+    "modelProvider": "ollama",
     "settings": {
         "voice": {
             "model": "en_GB-alan-medium"
